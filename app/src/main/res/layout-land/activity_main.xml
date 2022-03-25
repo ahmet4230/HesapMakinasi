@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="btnHesapla"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/BtnCıkar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="6dp"
+        android:onClick="btnHesapla"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/BtnBol"
+        app:layout_constraintStart_toEndOf="@+id/BtnTopla"
+        app:layout_constraintTop_toBottomOf="@+id/ikinciSayiTxt" />
+
+    <Button
+        android:id="@+id/BtnCarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:onClick="btnHesapla"
+        android:text="*"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BtnBol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnBol" />
+
+    <Button
+        android:id="@+id/BtnBol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:onClick="btnHesapla"
+        android:text="/"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BtnCıkar"
+        app:layout_constraintEnd_toStartOf="@+id/BtnCarp"
+        app:layout_constraintStart_toEndOf="@+id/BtnCıkar" />
+
+    <EditText
+        android:id="@+id/BirinciSayiTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="91dp"
+        android:ems="10"
+        android:hint="İLK SAYIYI GİRİNİZ"
+        android:inputType="numberSigned|textPersonName"
+        android:onClick="btnHesapla"
+        app:layout_constraintBottom_toBottomOf="@+id/ikinciSayiTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ikinciSayiTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="178dp"
+        android:ems="10"
+        android:hint="İKİNCİ SAYIYI GİRİNİZ"
+        android:inputType="numberSigned|textPersonName"
+        android:onClick="btnHesapla"
+        app:layout_constraintEnd_toStartOf="@+id/BtnBol"
+        app:layout_constraintStart_toStartOf="@+id/BtnBol"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnTopla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:onClick="btnHesapla"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BtnCıkar"
+        app:layout_constraintEnd_toStartOf="@+id/BtnCıkar"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TextSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:text="SONUÇ"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/BtnBol"
+        app:layout_constraintTop_toBottomOf="@+id/BtnCıkar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:text="AHMET BATMAN 18410051072"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TextSonuc"
+        app:layout_constraintStart_toEndOf="@+id/BtnTopla"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
